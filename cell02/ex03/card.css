@@ -1,0 +1,65 @@
+body,
+tbody {
+    height: 100%;
+    width: 100%;
+    margin: 0;
+    font: 400 14px "Lucida console", monospace;
+    color: black;
+}
+table {
+    padding: 0;
+}
+th {
+    height: 100px;
+    font: 25px "Lucida console", monospace;
+    font-weight: bolder;
+}
+
+.center {
+    height: 600px;
+    width: 100px;
+    margin-left: 0;
+    margin-right: 0;
+}
+td {
+    text-align: center;
+    width: 100%;
+    display: block;
+}
+
+body {
+    display: flex;
+    justify-content: center;
+    width: 100%;
+}
+
+tbody {
+    width: 400px;
+    height: 500px;
+    box-shadow: 0px 0px 10px #777;
+}
+
+.user {
+    margin: 15px 0;
+    font: 30px "Lucida console", monospace;
+    font-weight: bolder;
+}
+
+.level {
+    margin: 15px 0 15px 0;
+    font: 15px "Lucida console", monospace;
+    opacity: 0.5;
+}
+
+.icons {
+    margin: 20px 0;
+}
+.contact {
+    margin: 35px 0 0;
+    background-color: black;
+}
+
+a {
+    text-decoration: none;
+    color: white;
+}

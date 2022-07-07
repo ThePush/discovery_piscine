@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>calc</title>
+        <meta charset="utf-8" />
+        <script>
+            setInterval(function () {
+                alert("Please, use me...");
+            }, 30000);
+
+            function core() {
+                var box1 = parseFloat(document.getElementById("input1").value);
+                var box2 = parseFloat(document.getElementById("input2").value);
+                var result;
+                if (box1 < 0 || box2 < 0) {
+                    result = "Error :(";
+                } else {
+                    switch (
+                        document.getElementById("operators-select")
+                            .selectedIndex
+                    ) {
+                        case 0:
+                            result = box1 + box2;
+                            break;
+                        case 1:
+                            result = box1 - box2;
+                            break;
+                        case 2:
+                            result = box1 * box2;
+                            break;
+                        case 3:
+                            if (box1 && box2 == 0) {
+                                result = "It's over 9000!";
+                                break;
+                            } else {
+                                result = box1 / box2;
+                                break;
+                            }
+                        case 4:
+                            if (box1 && box2 == 0) {
+                                result = "It's over 9000!";
+                                break;
+                            } else {
+                                result = box1 % box2;
+                                break;
+                            }
+                    }
+                }
+                alert(result);
+                console.log(result);
+            }
+        </script>
+    </head>
+
+    <body>
+        <form
+            action=""
+            method="get"
+            class="inputs"
+            onsubmit="core(); return false;"
+        >
+            <div class="inputs">
+                <label for="input1"></label>
+                <input type="text" name="input1" id="input1" required />
+                <select name="operators" id="operators-select">
+                    <option value="+">+</option>
+                    <option value="-">-</option>
+                    <option value="*">*</option>
+                    <option value="/">/</option>
+                    <option value="%">%</option>
+                </select>
+                <label for="input2"></label>
+                <input type="text" name="input2" id="input2" required />
+                <input type="submit" value="Try me!" />
+            </div>
+        </form>
+    </body>
+</html>
